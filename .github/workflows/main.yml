@@ -13,7 +13,7 @@ jobs:
   build-release:
     uses: hatlabs/shared-workflows/.github/workflows/build-release.yml@main
     with:
-      package-name: cockpit-branding-halos
+      package-name: halos-cockpit-branding
       package-description: 'Custom HaLOS branding for Cockpit web interface'
       apt-distro: trixie
       apt-component: main
