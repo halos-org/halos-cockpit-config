@@ -1,8 +1,7 @@
 halos-cockpit-branding (0.3.1-1) unstable; urgency=medium
 
   * Fix dpkg-divert scripts to use new package name for diversion ownership.
-  * Add migration logic to transfer diversions from old package name.
-  * Add explicit --no-rename flag to avoid dpkg-divert deprecation warnings.
+  * Add visible = true for cockpit in webapps.d/cockpit.toml.
 
  -- Matti Airas <matti.airas@hatlabs.fi>  Wed, 18 Dec 2025 12:00:00 +0200
 

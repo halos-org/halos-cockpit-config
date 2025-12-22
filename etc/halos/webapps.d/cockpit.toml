@@ -6,6 +6,7 @@ url = "https://halos.local:9090"
 description = "System management console"
 icon_url = "/usr/share/pixmaps/cockpit.svg"
 category = "System"
+visible = true
 
 # Native service (not a Docker container)
 [type]

@@ -4,14 +4,6 @@ set -e
 # Divert files from cockpit-ws package
 if [ "$1" = "install" ] || [ "$1" = "upgrade" ]; then
     for file in branding.css logo.svg logo.png apple-touch-icon.png favicon.ico; do
-        # Migrate diversions from old package name (cockpit-branding-halos) if they exist
-        if [ "$(dpkg-divert --listpackage "/usr/share/cockpit/branding/debian/${file}" 2>/dev/null)" = "cockpit-branding-halos" ]; then
-            # Remove old diversion (without --rename to keep files in place)
-            dpkg-divert --package cockpit-branding-halos --no-rename \
-                --remove /usr/share/cockpit/branding/debian/${file} || true
-        fi
-
-        # Create diversion with new package name
         dpkg-divert --package halos-cockpit-branding \
             --divert /usr/share/cockpit/branding/debian/${file}.original \
             --rename /usr/share/cockpit/branding/debian/${file} || true
