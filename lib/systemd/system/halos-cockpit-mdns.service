@@ -1,0 +1,26 @@
+[Unit]
+Description=mDNS advertisement for Cockpit subdomain
+Documentation=https://github.com/hatlabs/halos-distro
+After=network-online.target avahi-daemon.service cockpit.socket
+Wants=network-online.target
+BindsTo=cockpit.socket
+PartOf=cockpit.socket
+
+[Service]
+Type=simple
+# Get hostname and IP, then run avahi-publish-address
+# The subdomain cockpit.{hostname}.local will resolve to this host's IP
+ExecStart=/bin/bash -c '\
+    HOSTNAME="$(hostname -s)" && \
+    HOST_IP="$(ip route get 1.1.1.1 2>/dev/null | grep -oP "src \\K[0-9.]+")" && \
+    if [ -z "$HOST_IP" ]; then \
+        echo "ERROR: Could not determine host IP address" >&2; \
+        exit 1; \
+    fi && \
+    echo "Advertising cockpit.$HOSTNAME.local -> $HOST_IP" && \
+    exec /usr/bin/avahi-publish-address -R "cockpit.$HOSTNAME.local" "$HOST_IP"'
+Restart=on-failure
+RestartSec=5
+
+[Install]
+WantedBy=cockpit.socket

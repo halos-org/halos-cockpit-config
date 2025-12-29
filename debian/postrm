@@ -5,7 +5,7 @@ set -e
 if [ "$1" = "remove" ] || [ "$1" = "purge" ]; then
     for file in branding.css logo.svg logo.png apple-touch-icon.png favicon.ico; do
         # Remove diversion (restore original file)
-        dpkg-divert --package halos-cockpit-branding \
+        dpkg-divert --package halos-cockpit-config \
             --remove --rename /usr/share/cockpit/branding/debian/${file} || true
     done
 fi

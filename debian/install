@@ -1,3 +1,4 @@
 etc/cockpit/branding/* usr/share/cockpit/branding/debian/
 etc/halos/webapps.d/* etc/halos/webapps.d/
 usr/share/pixmaps/cockpit.svg usr/share/pixmaps/
+lib/systemd/system/halos-cockpit-mdns.service lib/systemd/system/

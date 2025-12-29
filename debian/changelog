@@ -1,3 +1,12 @@
+halos-cockpit-config (0.4.0-1) unstable; urgency=medium
+
+  * Rename package from halos-cockpit-branding to halos-cockpit-config.
+  * Add mDNS subdomain advertisement for cockpit.{hostname}.local.
+  * Update cockpit.toml to use subdomain URL via {{domain}} templating.
+  * Package now provides full Cockpit integration for HaLOS.
+
+ -- Matti Airas <matti.airas@hatlabs.fi>  Sun, 29 Dec 2025 22:00:00 +0200
+
 halos-cockpit-branding (0.3.1-1) unstable; urgency=medium
 
   * Fix dpkg-divert scripts to use new package name for diversion ownership.
