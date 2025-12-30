@@ -11,7 +11,8 @@ Package: halos-cockpit-config
 Architecture: all
 Depends: ${misc:Depends},
          cockpit,
-         avahi-utils
+         avahi-utils,
+         xdg-utils
 Replaces: halos-cockpit-branding (<< 0.4.0),
           cockpit-branding-halos (<< 0.3.0)
 Breaks: halos-cockpit-branding (<< 0.4.0),
