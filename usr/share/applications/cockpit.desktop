@@ -7,3 +7,4 @@ Icon=/usr/share/pixmaps/cockpit.svg
 Exec=xdg-open http://cockpit.localhost/
 Terminal=false
 Categories=System;Settings;
+Keywords=server;admin;network;services;containers;

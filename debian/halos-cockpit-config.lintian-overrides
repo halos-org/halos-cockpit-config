@@ -1,3 +1,6 @@
 # The mDNS service is intentionally wanted by cockpit.socket
 # to ensure it starts when Cockpit is activated
-halos-cockpit-config: systemd-service-file-refers-to-unusual-wantedby-target cockpit.socket [lib/systemd/system/halos-cockpit-mdns.service]
+halos-cockpit-config: systemd-service-file-refers-to-unusual-wantedby-target cockpit.socket [usr/lib/systemd/system/halos-cockpit-mdns.service]
+
+# xdg-open is provided by xdg-utils which is a dependency
+halos-cockpit-config: desktop-command-not-in-package xdg-open [usr/share/applications/cockpit.desktop]
