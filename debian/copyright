@@ -1,6 +1,6 @@
 Format: https://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
 Upstream-Name: cockpit-branding-halos
-Source: https://github.com/hatlabs/halos-distro
+Source: https://github.com/halos-org/halos-distro
 
 Files: *
 Copyright: 2025 Hat Labs Ltd <info@hatlabs.fi>
