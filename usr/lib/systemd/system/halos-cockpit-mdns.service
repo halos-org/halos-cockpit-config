@@ -1,6 +1,6 @@
 [Unit]
 Description=mDNS advertisement for Cockpit subdomain
-Documentation=https://github.com/halos-org/halos-distro
+Documentation=https://github.com/halos-org/halos
 After=network-online.target avahi-daemon.service cockpit.socket
 Wants=network-online.target
 BindsTo=cockpit.socket
