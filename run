@@ -41,7 +41,7 @@ function build-deb {
 
   # List generated packages
   echo "📦 Generated packages:"
-  ls -lh cockpit-branding-halos*.deb 2>/dev/null || echo "⚠️  No .deb files found"
+  ls -lh halos-cockpit-config*.deb 2>/dev/null || echo "⚠️  No .deb files found"
   echo "✅ Package build complete"
 }
 
