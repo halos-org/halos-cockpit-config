@@ -1,4 +1,5 @@
 etc/cockpit/branding/* usr/share/cockpit/branding/debian/
+etc/cockpit/packagekit.override.json etc/cockpit/
 etc/halos/webapps.d/* etc/halos/webapps.d/
 usr/share/applications/cockpit.desktop usr/share/applications/
 usr/share/pixmaps/cockpit.svg usr/share/pixmaps/
