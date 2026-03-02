@@ -11,7 +11,6 @@ Package: halos-cockpit-config
 Architecture: all
 Depends: ${misc:Depends},
          cockpit,
-         avahi-utils,
          xdg-utils
 Replaces: halos-cockpit-branding (<< 0.4.0),
           cockpit-branding-halos (<< 0.3.0)
@@ -21,5 +20,5 @@ Provides: halos-cockpit-branding,
           cockpit-branding-halos
 Description: HaLOS Cockpit configuration and branding
  This package provides HaLOS-specific configuration for the Cockpit
- web interface, including branding (logo, CSS, favicon), Homarr dashboard
- integration, and mDNS subdomain advertisement for cockpit.{hostname}.local.
+ web interface, including branding (logo, CSS, favicon) and Homarr dashboard
+ integration.

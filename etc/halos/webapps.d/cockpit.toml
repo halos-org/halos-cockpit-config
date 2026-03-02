@@ -2,7 +2,7 @@
 # Registry entry for HaLOS dashboard
 
 name = "Cockpit"
-url = "https://cockpit.{{domain}}"
+url = "https://{{domain}}/cockpit/"
 description = "System management console"
 icon_url = "/usr/share/pixmaps/cockpit.svg"
 category = "System"
