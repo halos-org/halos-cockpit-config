@@ -2,7 +2,9 @@
 # Registry entry for HaLOS dashboard
 
 name = "Cockpit"
-url = "https://{{domain}}/cockpit/"
+# Path-only URL: resolves against whatever hostname the user is currently
+# on (mDNS, VPN FQDN, DHCP-DNS), enabling multi-hostname access.
+url = "/cockpit/"
 description = "System management console"
 icon_url = "/usr/share/pixmaps/cockpit.svg"
 category = "System"
