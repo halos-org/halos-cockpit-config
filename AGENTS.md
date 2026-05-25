@@ -14,10 +14,7 @@ cd halos/
 # This repo is available as: halos-cockpit-config/
 ```
 
-**Development Workflows**: See `halos/docs/` folder:
-- `halos/docs/DEVELOPMENT_WORKFLOW.md` - Detailed Claude Code workflows
-- `halos/docs/PROJECT_PLANNING_GUIDE.md` - Project planning process
-- `halos/docs/IMPLEMENTATION_CHECKLIST.md` - Implementation checklist
+**Development Workflows**: See the [halos workspace docs](https://github.com/halos-org/halos/tree/main/docs) for `DEVELOPMENT_WORKFLOW.md` (detailed Claude Code workflows), `PROJECT_PLANNING_GUIDE.md`, and `IMPLEMENTATION_CHECKLIST.md`.
 
 ## About This Project
 
@@ -52,7 +49,7 @@ HaLOS-specific configuration for the Cockpit web interface. This package integra
 
 **`.bumpversion.cfg`** tracks the current version and updates the VERSION file. The working directory must be clean before bumping — bumpversion automatically commits the change.
 
-**`debian/changelog`** is generated dynamically by CI at build time (`shared-workflows/build-release.yml`). The checked-in version is only used for local dev builds and will typically be out of sync with VERSION. This is expected — never manually edit `debian/changelog`.
+**`debian/changelog`** is generated dynamically by CI at build time (see [shared-workflows `build-release.yml`](https://github.com/halos-org/shared-workflows/blob/main/.github/workflows/build-release.yml)). The checked-in version is only used for local dev builds and will typically be out of sync with VERSION. This is expected — never manually edit `debian/changelog`.
 
 **CI enforcement**: VERSION bumps are *per release cycle*, not per PR. Default: do NOT bump `VERSION` in feature PRs — CI auto-increments the `+N` revision in release tags (e.g., `v0.5.6+1`, `+2`, `+3`) between stable releases. Bump `VERSION` only when starting a new release cycle, i.e., when `VERSION` currently matches the latest stable tag and this PR is opening the next cycle. If `VERSION` already differs from the latest stable tag, no further bump is needed regardless of how many package-affecting files this PR touches. Docs, tests, CI config, and dev tooling are automatically excluded from the check.
 
