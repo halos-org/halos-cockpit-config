@@ -54,7 +54,7 @@ HaLOS-specific configuration for the Cockpit web interface. This package integra
 
 **`debian/changelog`** is generated dynamically by CI at build time (`shared-workflows/build-release.yml`). The checked-in version is only used for local dev builds and will typically be out of sync with VERSION. This is expected — never manually edit `debian/changelog`.
 
-**CI enforcement**: VERSION bumps are *per release cycle*, not per PR — see the workspace policy in `halos/AGENTS.md`. Default: do NOT bump `VERSION` in feature PRs; CI auto-increments the `+N` revision in tags between releases. Bump `VERSION` only when starting a new release cycle (when `VERSION` matches the latest stable tag). Docs, tests, CI config, and dev tooling are automatically excluded from the check.
+**CI enforcement**: VERSION bumps are *per release cycle*, not per PR. Default: do NOT bump `VERSION` in feature PRs — CI auto-increments the `+N` revision in release tags (e.g., `v0.5.6+1`, `+2`, `+3`) between stable releases. Bump `VERSION` only when starting a new release cycle, i.e., when `VERSION` currently matches the latest stable tag and this PR is opening the next cycle. If `VERSION` already differs from the latest stable tag, no further bump is needed regardless of how many package-affecting files this PR touches. Docs, tests, CI config, and dev tooling are automatically excluded from the check.
 
 ## Project Structure
 
