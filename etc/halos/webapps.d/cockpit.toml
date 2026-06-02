@@ -14,10 +14,10 @@ visible = true
 [type]
 # No container_name - this is a native systemd service
 
-# Layout: top-left corner, 2x2 size, highest priority
+# Layout: top-right corner, 1x1 size, highest priority
 [layout]
 priority = 10  # Core system app - placed first on dashboard
-width = 2
+width = 1
 height = 1
-x_offset = 0
+x_offset = 11
 y_offset = 0
